@@ -18,9 +18,43 @@
 </div>
 <div class="bg-yellow-100 border-l-4 border-yellow-400 rounded-lg p-5 mb-10 max-w-2xl mx-auto">
   <div class="text-lg font-semibold text-darkblue mb-2">温馨提示</div>
-  <div class="text-darkblue text-base leading-relaxed">
+  <div class="text-darkblue text-base leading-relaxed mb-4">
     如果您在中国大陆地区，<span class="font-bold text-secondary">请将您的 App Store 区域切换到中国大陆以外</span>，即可通过 App Store 或 Google Play 下载本应用。<br>
     如果您使用安卓手机且不想切换区域，可以直接下载 <span class="font-bold text-secondary">APK 直装包</span> 进行安装。
+  </div>
+  <div class="flex flex-col gap-3">
+    <button onclick="document.getElementById('ios-guide').classList.toggle('hidden')" class="button w-full text-center">iOS 切换 App Store 地区教程</button>
+    <div id="ios-guide" class="hidden bg-white rounded-lg shadow p-4 mt-2">
+      <div class="font-bold text-secondary mb-2">iOS 切换 App Store 地区详细步骤：</div>
+      <ol class="list-decimal list-inside text-darkblue space-y-2">
+        <li>打开 iPhone 的“设置”应用，点击顶部的 Apple ID 头像。</li>
+        <li>选择“媒体与购买项目” &gt; “查看账户”。</li>
+        <li>输入 Apple ID 密码后，点击“国家/地区”。</li>
+        <li>选择“更改国家或地区”，选择如“美国”或“香港”等非中国大陆地区。</li>
+        <li>同意条款，填写地址信息（可随意填写），完成切换。</li>
+      </ol>
+      <div class="flex gap-3 mt-3">
+        <img src="/images/ios-step1.png" alt="iOS 步骤1" class="w-32 rounded border">
+        <img src="/images/ios-step2.png" alt="iOS 步骤2" class="w-32 rounded border">
+        <img src="/images/ios-step3.png" alt="iOS 步骤3" class="w-32 rounded border">
+      </div>
+    </div>
+    <button onclick="document.getElementById('android-guide').classList.toggle('hidden')" class="button w-full text-center">Google Play 切换地区教程</button>
+    <div id="android-guide" class="hidden bg-white rounded-lg shadow p-4 mt-2">
+      <div class="font-bold text-secondary mb-2">Google Play 切换地区详细步骤：</div>
+      <ol class="list-decimal list-inside text-darkblue space-y-2">
+        <li>打开 Google Play 商店，点击右上角头像，进入“设置”。</li>
+        <li>选择“常规” &gt; “账户和设备偏好设置”。</li>
+        <li>在“国家和地区”下，选择添加新的国家或地区（如美国、香港等）。</li>
+        <li>根据提示添加付款方式，完成切换。</li>
+        <li>如无“切换国家”选项，可尝试清除 Play 商店数据或更换 Google 账号。</li>
+      </ol>
+      <div class="flex gap-3 mt-3">
+        <img src="/images/android-step1.png" alt="Android 步骤1" class="w-32 rounded border">
+        <img src="/images/android-step2.png" alt="Android 步骤2" class="w-32 rounded border">
+        <img src="/images/android-step3.png" alt="Android 步骤3" class="w-32 rounded border">
+      </div>
+    </div>
   </div>
 </div>
 <h2 class="text-2xl text-secondary font-bold mb-6">应用特色</h2>
@@ -31,4 +65,8 @@
       <div class="text-base text-darkblue font-medium">功能<%= i+1 %></div>
     </div>
   <% end %>
-</div> 
+</div>
+<script>
+// 兼容多次点击按钮的展开/收起
+// 这里简单用 toggle('hidden')，如需动画可用 Tailwind 的 transition/animate
+</script> 
