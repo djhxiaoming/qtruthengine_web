@@ -1,0 +1,23 @@
+<h1 class="text-3xl font-bold text-darkblue mb-6">购买选项</h1>
+<h2 class="text-xl text-secondary font-semibold mb-4">应用内金币</h2>
+<div class="flex flex-wrap gap-8 mb-10 justify-center">
+  <% @coins.each do |coin| %>
+    <div class="bg-white rounded-xl shadow-md p-6 min-w-[170px] text-center flex-1 max-w-xs flex flex-col items-center">
+      <div class="text-3xl text-primary font-bold mb-1">&#128176;</div>
+      <div class="text-lg text-darkblue font-semibold"><%= coin[:amount] %> 金币</div>
+      <div class="text-base text-secondary mb-3"><%= coin[:price] %></div>
+      <a href="#" class="button">购买</a>
+    </div>
+  <% end %>
+</div>
+<h2 class="text-xl text-secondary font-semibold mb-4">会员套餐</h2>
+<div class="flex flex-wrap gap-8 justify-center">
+  <% @memberships.each do |m| %>
+    <div class="bg-white rounded-xl shadow-md p-6 min-w-[180px] text-center flex-1 max-w-xs flex flex-col items-center">
+      <div class="text-2xl text-secondary font-bold mb-1">&#11088;</div>
+      <div class="text-lg text-darkblue font-semibold"><%= m[:name] %> 会员</div>
+      <div class="text-base text-secondary mb-3"><%= m[:price] %></div>
+      <a href="#" class="button">订阅</a>
+    </div>
+  <% end %>
+</div> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile App Promo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ffd600',
+            secondary: '#0057b8',
+            darkblue: '#003366',
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'Segoe UI', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .button {
+      @apply bg-gradient-to-r from-primary to-secondary text-darkblue font-bold px-5 py-2 rounded-lg shadow hover:from-secondary hover:to-primary hover:text-white transition inline-block border-0;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-yellow-50 to-blue-50 min-h-screen font-sans text-darkblue">
+  <nav class="sticky top-0 z-50 bg-white shadow-md rounded-b-2xl border-b-4 border-secondary flex flex-wrap items-center justify-between px-6 py-3">
+    <div class="flex items-center space-x-8">
+      <span class="text-2xl font-bold text-secondary select-none">应用名称</span>
+      <a href="/" class="text-darkblue font-semibold hover:text-secondary transition">首页</a>
+      <a href="/purchase" class="text-darkblue font-semibold hover:text-secondary transition">购买</a>
+    </div>
+    <button class="ml-6 px-6 py-2 rounded-full font-bold text-white bg-gradient-to-r from-secondary to-primary shadow hover:from-primary hover:to-secondary hover:text-darkblue transition">登录</button>
+  </nav>
+  <div class="container mx-auto max-w-3xl bg-white rounded-2xl shadow-lg p-8 my-10 min-h-[60vh]">
+    <%= yield %>
+  </div>
+  <footer class="text-center text-gray-500 text-base py-6 border-t border-gray-200 bg-transparent">
+    &copy; <%= Time.now.year %> 应用名称. 保留所有权利 | 设计 <span class="text-primary">&#9733;</span>
+  </footer>
+</body>
+</html> 
